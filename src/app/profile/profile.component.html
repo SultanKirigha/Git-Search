@@ -1,0 +1,58 @@
+<div id="header">
+  <ul class="nav justify-content-center">
+    <img src="./assets/code+collaboration+github+network+round+social+icon-1320086084536018107.png" style="width:55px;height: 55px;margin-top: 20px;">
+    <li class="nav-item">
+      <a class="nav-link active" href="#" style="font-size: 50px; font-weight: bold;">GitSearch</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true" style="font-weight: bold;font-size: 20px;">APP</a>
+    </li>
+  </ul>
+</div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-header shadow p-3 mb-5 bg-white rounded">
+          <h4 style="font-weight: bold;font-size: 300%;color: #007bff;">🕵️Find-user</h4>
+        </div>
+        <div class="card-body " style="background-color:white">
+          <form class="form-inline">
+            <div class="form-group ">
+              <input [(ngModel)]="githubUserQuery" name="user" size="40" type="search" class="form-control">
+            </div>
+            <div>
+              <input style="margin-left: 10%;" type="submit" value="search" class="btn btn-primary btn-sm" (click)="getUser()">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <img src="{{profile?.avatar_url}}" alt="" style="width:100px;height:100px;border-radius:20px;">
+      <br>
+      {{profile?.name}}
+      <br>
+      {{profile?.bio}}
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let repo of repos">
+      {{repo.name}}
+      <br>
+      {{repo.description}}
+      <br>
+      
+      <button><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">View</a></button>
+    </div>
+  </div>
+</div>
