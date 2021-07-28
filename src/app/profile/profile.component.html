@@ -33,9 +33,9 @@
 <div class="container">
   <div class="row row-cols-3">
     <div class="row justify-content-center">
-    <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 25rem;height: 25rem;">
+    <div class="card shadow p-3 mb-5 rounded" style="width: 25rem;height: 25rem;background-color:rgba(232, 253, 255, 0.705);">
       <img src="{{profile?.avatar_url}}" alt=""  style="width:200px;height:200px;border-radius:50%;margin-left:25%;margin-top:0%;justify-content: center;">
-      <div class="card-body shadow p-3 mb-5 bg-white rounded">
+      <div class="card-body shadow p-3 mb-5 rounded"style="background-color:rgba(232, 253, 255, 0.705);">
         <h3 class="card-title"style="color: #007bff;font-weight:bold;">{{profile?.name}}</h3>
         <h6 class="card-text" style="font-weight: bolder;">{{profile?.bio}}</h6>
         <a href="{{profile?.html_url}}" target="_blank" class="btn btn-danger">Github</a>
@@ -56,10 +56,10 @@
 </div> -->
 <div class="container-fluid">
    <div class="container">
-        <div class="container allrepos">
+        <div class="allrepos" style="display: flex; flex-wrap: wrap;justify-content: space-around;">
             <div class="card" style="width: 22rem;" class="repo">
               <div class="card-body" *ngFor="let repo of repos">
-                <h5 class="card-title">Repo Name: &nbsp;{{repo.name}} </h5>
+                <h5 class="card-title" style="color: #007bff; font-weight: bolder;">Repo Name: &nbsp;{{repo.name}} </h5>
                 <div class="card-text">
                   <hr>
                   <div class="desc"><span class="top">Description:</span> &nbsp;{{repo.description}} 
