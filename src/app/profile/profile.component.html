@@ -30,39 +30,28 @@
     </div>
   </div>
 </div>
-
-<div class="row justify-content-center">
-<div class="card shadow p-3 mb-5 bg-white rounded" style="width: 25rem;height: 25rem;">
-  <img src="{{profile?.avatar_url}}" alt=""  style="width:200px;height:200px;border-radius:50%;margin-left:25%;margin-top:0%;justify-content: center;">
-  <div class="card-body shadow p-3 mb-5 bg-white rounded">
-    <h3 class="card-title"style="color: #007bff;font-weight:bold;">{{profile?.name}}</h3>
-    <h6 class="card-text" style="font-weight: bolder;">{{profile?.bio}}</h6>
-    <a href="{{profile?.html_url}}" target="_blank" class="btn btn-danger">Github</a>
-</div>
-</div>
-</div>
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="col-md-3" *ngFor="let repo of repos">
-      {{repo.name}}
-      <br>
-      {{repo.description}}
-      <br>
-      
-      <button><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">View</a></button>
-    </div>
-  </div>
-</div> -->
-<div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card" style="width: 30%; margin-left: 35%;">
-      <div class="card-body" *ngFor="let repo of repos">
-        <h5 class="card-title"> {{repo.name}}</h5>
-        <p class="card-text">{{repo.description}}</p>
-        <button><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">View</a></button>
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="row justify-content-center">
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 25rem;height: 25rem;">
+      <img src="{{profile?.avatar_url}}" alt=""  style="width:200px;height:200px;border-radius:50%;margin-left:25%;margin-top:0%;justify-content: center;">
+      <div class="card-body shadow p-3 mb-5 bg-white rounded">
+        <h3 class="card-title"style="color: #007bff;font-weight:bold;">{{profile?.name}}</h3>
+        <h6 class="card-text" style="font-weight: bolder;">{{profile?.bio}}</h6>
+        <a href="{{profile?.html_url}}" target="_blank" class="btn btn-danger">Github</a>
       </div>
     </div>
-  </div>
+ </div>
+       <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+          <div class="card" style="width: 30%; margin-left: 35%;">
+            <div class="card-body" *ngFor="let repo of repos">
+              <h5 class="card-title"> Repo Name: {{repo.name}}</h5>
+              <p class="card-text">{{repo.description}}</p>
+              <button><a href="{{repo.html_url}}" target="_blank" class="btn btn-primary">View</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
