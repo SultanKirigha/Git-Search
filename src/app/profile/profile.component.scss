@@ -3,12 +3,12 @@
 }
 .card-body{
 padding: 40px 45px;
-display: flex;
+display: grid;
 flex-wrap: wrap;
 justify-content: center;
 }
 .allrepos{
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     justify-content: space-around;
   }
