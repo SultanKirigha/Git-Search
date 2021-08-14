@@ -9,10 +9,11 @@ import { Observable } from 'rxjs';
 export class ApiService {
 
   username: string;
-  endPart: any = 'k8zlaiUV10q93p';
+  token: string;
+  endPart: any = 'WUlWfnbHTiNHee4YjCuu';
 
-  // ghp_khvgaNdReAHSRDG3vArT4j
-  // k8zlaiUV10q93p
+  // ghp_IxON6SWJJgzwefwu
+  // WUlWfnbHTiNHee4YjCuu
 
   constructor(
     private http: HttpClient
@@ -20,11 +21,11 @@ export class ApiService {
 
 
   getProfileInfo(name: string): Observable<any> {
-    return this.http.get("https://api.github.com/users/" + name + '?access_token=' + 'ghp_khvgaNdReAHSRDG3vArT4j' + this.endPart);
+    return this.http.get("https://api.github.com/users/" + name + '?access_token=' + 'ghp_IxON6SWJJgzwefwu' + this.endPart);
   }
 
   getUserRepos(name: string): Observable<any> {
-    return this.http.get("https://api.github.com/users/" + name + '/repos?access_token=' + 'ghp_khvgaNdReAHSRDG3vArT4j' + this.endPart);
+    return this.http.get("https://api.github.com/users/" + name + '/repos?access_token=' + 'ghp_IxON6SWJJgzwefwu' + this.endPart);
   }
 
 }
