@@ -32,7 +32,7 @@
 </div>
 <div class="container">
   <div class="row row-cols-3">
-    <div class="row justify-content-center" style="justify-content:center; margin-left: ;">
+    <div class="row justify-content-center" style="justify-content:center; margin-left:30%;">
     <div class="card shadow p-3 mb-5 rounded bg-white" style="width: 25rem;height: 25rem;background-color:rgba(232, 253, 255, 0.705);">
       <img src="{{profile?.avatar_url}}" alt=""  style="width:200px;height:200px;border-radius:50%;margin-left:25%;margin-top:0%;justify-content: center;">
       <div class="card-body shadow p-3 mb-5 rounded"style="background-color:rgba(232, 253, 255, 0.705);">
@@ -45,7 +45,7 @@
 <div class="container-fluid">
    <div class="container">
         <div class="allrepos" style="display: flex; flex-wrap: wrap;justify-content: space-around;">
-            <div class="card" style="width: 22rem;" class="repo">
+            <div class="card"  class="repo">
               <div class="card-body shadow p-3 mb-5 rounded bg-white" *ngFor="let repo of repos">
                 <h5 class="card-title" style="color: #007bff; font-weight: bolder;">Repo Name: &nbsp;{{repo.name}} </h5>
                 <div class="card-text">
